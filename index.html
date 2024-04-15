@@ -24,7 +24,7 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-Access more features of HTML5 on a mobile device by using the camera feature of a phone or a file system of a computer  to load an image onto a canvas element. The code should also provide basic image analysis by creating a second canvas and have it display only the blue color of the image.
+  Access more features of HTML5 on a mobile device by using the camera feature of a phone or a file system of a computer  to load an image onto a canvas element. The code should also provide basic image analysis by creating a second canvas and have it display only the blue color of the image.
  
   Known Issues:
   There are no known issues in this code.
@@ -102,13 +102,13 @@ Access more features of HTML5 on a mobile device by using the camera feature of 
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-      var bCanvas = document.getElementById('myCanvas2');
-      var bContext = bcanvas.getContext("2d");
+      var bCanvas = document.getElementById('myCanvas2'); //creates blue canvas
+      var bContext = bcanvas.getContext("2d");//makes canvas 2 dimensional and calls for the canvas to be the context
 
-      var imageData = context.getImageData(0,0,600,500);
-      var data = imageData.data;
+      var imageData = context.getImageData(0,0,600,500); //stores image with pixel data from first canvas
+      var data = imageData.data;//passes object with pixel data
 
-      for(let j=0; j<imageData.data.length; j+=4) 
+      for(let j=0; j<imageData.data.length; j+=4)//defines loop at 0, then loops through pixel data
        {
         imageData.data[j] = 0;
         imageData.data[j+1] = 0
