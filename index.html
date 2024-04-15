@@ -113,7 +113,8 @@ Access more features of HTML5 on a mobile device by using the camera feature of 
         imageData.data[j] = 0;
         imageData.data[j+1] = 0
        }
-          
+
+      bContext.putImageData(imageData,0,0);
           
         } // end of img.onload
         
@@ -145,7 +146,7 @@ Access more features of HTML5 on a mobile device by using the camera feature of 
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
@@ -153,6 +154,15 @@ Access more features of HTML5 on a mobile device by using the camera feature of 
         context.fillText("Original image will go here", 10, 20);
       </script>
 
+      <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
+        var bcanvas = document.getElementById('myCanvas2');
+        var bcontext = bcanvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("Transformed image will go here", 10, 20);
+      </script>
+     
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
