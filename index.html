@@ -149,18 +149,18 @@
       <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+        context.font = '20pt Calibri'; //establishes font style and size
+        context.fillStyle = "black"; //makes text black
+        context.fillText("Original image will go here", 10, 20); //displays the text for the canvas and sets coordinates on where it fits on the canvas
       </script>
 
       <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas2" */
         var bcanvas = document.getElementById('myCanvas2');
         var bcontext = bcanvas.getContext("2d");
-        bcontext.font = '20pt Calibri';
-        bcontext.fillStyle = "black";
-        bcontext.fillText("Transformed image will go here", 10, 20);
+        bcontext.font = '20pt Calibri'; //establishes font style and size
+        bcontext.fillStyle = "black"; //makes text black
+        bcontext.fillText("Transformed image will go here", 10, 20); //displays the text for the canvas and sets coordinates on where it fits on the canvas
       </script>
      
     </div><!-- /content -->
