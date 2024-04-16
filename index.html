@@ -110,11 +110,11 @@
 
       for(let j=0; j<imageData.data.length; j+=4)//defines loop at 0, then loops through pixel data
        {
-        imageData.data[j] = 0;
-        imageData.data[j+1] = 0
+        imageData.data[j] = 0; //changes red color (R IN RGB) to 0 so the color doesn't show
+        imageData.data[j+1] = 0; //changes green color (G IN RGB) to 0 so the color doesn't show
        }
 
-      bContext.putImageData(imageData,0,0);
+      bContext.putImageData(imageData,0,0); //modifies image data to make all pixels blue and displays transformed image onto the second canvas
           
         } // end of img.onload
         
